@@ -1,0 +1,312 @@
+{
+	"info": {
+		"_postman_id": "86b9ce7e-c9ea-4be0-a6ed-f00f815491e5",
+		"name": "SegurosUnimed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19446076",
+		"_collection_link": "https://galactic-shadow-800149.postman.co/workspace/My-workspace~fd708d7f-0512-440f-9724-b02c95f2cbd8/collection/19446076-86b9ce7e-c9ea-4be0-a6ed-f00f815491e5?action=share&source=collection_link&creator=19446076"
+	},
+	"item": [
+		{
+			"name": "Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers By City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/city/Olinda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"city",
+						"Olinda"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/name/Gamora",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"name",
+						"Gamora"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers By Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/email/aranha@vingadores.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"email",
+						"aranha@vingadores.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers By Gender",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/gender/F",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"gender",
+						"F"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers By State",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/state/PE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"state",
+						"PE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers Paginado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers?page=0&size=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ismael\",\n    \"email\": \"ismael@gmail.com\",\n    \"gender\": \"M\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Save Address",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"street\": \"Rua doze\",\n    \"cep\": \"53100000\",\n    \"complement\": \"Terceira Etapa\",\n    \"neighborhood\": \"Rio Doce\",\n    \"city\": \"Olinda\",\n    \"state\": \"PE\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/address/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"address",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Save Address By CEP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"street\": \"Rua onze\",\n    \"cep\": \"53000000\",\n    \"complement\": \"Terceira Etapa\",\n    \"neighborhood\": \"Rio Doce\",\n    \"city\": \"Olinda\",\n    \"state\": \"PE\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/address/5/cep/53090340",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"address",
+						"5",
+						"cep",
+						"53090340"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ismael ALT\",\n    \"email\": \"ismael@gmail.com\",\n    \"gender\": \"M\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customers PUT Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Ismael ALT\",\n    \"email\": \"ismael@gmail.com\",\n    \"gender\": \"M\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
